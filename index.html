@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KIRA HARGA BUDI95</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>KIRA HARGA BUDI95</h1>
+    </header>
+
+    <div class="card">
+      <h2>Tetapan harga</h2>
+      <div class="row">
+        <div class="field">
+          <label>Harga pasaran (RM/liter)</label>
+          <input type="number" id="marketPrice" step="0.01" min="0.01" value="2.54">
+        </div>
+        <div class="field">
+          <label>Harga subsidi (RM/liter)</label>
+          <input type="number" id="subsidyPrice" step="0.01" min="0.01" value="1.99" readonly>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Jumlah isi (RM)</label>
+          <input type="number" id="amount" step="0.01" min="0.01" value="10.00">
+        </div>
+        <div class="actions">
+          <button class="primary" id="calcBtn">Kira</button>
+          <button class="danger" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Keputusan letak bawah tetapan -->
+    <div class="card">
+      <h2>Keputusan</h2>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Nilai</th></tr>
+        </thead>
+        <tbody>
+          <tr class="highlight"><td><strong>Jumlah isian penuh (RM)</strong></td><td id="amountOut"><strong>—</strong></td></tr>
+          <tr><td>Liter tanpa subsidi</td><td id="litersNo">—</td></tr>
+          <tr><td>Liter dengan subsidi</td><td id="litersYes">—</td></tr>
+          <tr><td>Liter subsidi (extra)</td><td id="litersExtra">—</td></tr>
+          <tr><td>Manfaat subsidi (RM)</td><td id="rmBenefit">—</td></tr>
+          <tr><td>Peratus beza liter</td><td id="percentDiff">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      Created by Abang Mie BHP
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
